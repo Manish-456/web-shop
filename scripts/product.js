@@ -21,23 +21,6 @@ function redirectToLoginPage() {
 
 redirectToLoginPage();
 
-function toggleCategories() {
-  document.getElementById("category-dropdown").classList.toggle("show");
-
-  //Close the dropdown if the user clicks outside of it
-  window.onclick = function (e) {
-    if (!e.target.matches(".categorybtn")) {
-      const dropdowns = document.getElementsByClassName("product-categories");
-      for (let i = 0; i < dropdowns.length; i++) {
-        const openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show")) {
-          openDropdown.classList.remove("show");
-        }
-      }
-    }
-  };
-}
-
 async function getProductById(id) {
   try {
     const response = await fetch(
