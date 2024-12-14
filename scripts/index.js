@@ -91,7 +91,9 @@ function addToCart(id, title, price) {
 
 // Filter products by selected category
 function filterByCategory(category) {
-  title.innerHTML = category.charAt(0).toUpperCase() + category.substring(1);
+  const titleText = category.charAt(0).toUpperCase() + category.substring(1);
+
+  title.innerHTML = category === "all" ? "All Products" : titleText;
   if (category === "all") {
     displayProducts(allProducts); // Show all products
   } else {
