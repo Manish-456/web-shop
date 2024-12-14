@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Shop</title>
+    <link rel="stylesheet" href="./styles/index.css">
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-item">
+            <a href="#" id="home">Home</a>
+            <!-- Product Categories  -->
+            <div class="categories">
+                <button class="categorybtn" onClick="toggleCategories()">Categories
+                    <span>&downarrow;</span></button>
+                <div id="category-dropdown" class="product-categories">
+                    <button class="category" onclick="filterByCategory('all')">All Products</button>
+                    <button class="category" onclick="filterByCategory('electronics')">Electronics</button>
+                    <button class="category" onclick="filterByCategory('jewelery')">Jewelery</button>
+                    <button class="category" onclick="filterByCategory('men\'s clothing')">Men's Clothing</button>
+                    <button class="category" onclick="filterByCategory('women\'s clothing')">Women's
+                        Clothing</button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-item">
+            <a href="/cart.html" id="view-cart"><img src="./assets/shopping-cart.svg" alt="cart" width="20" height="20">
+                <span class="badge">0</span></a>
+            <button id="logout" class="logout-btn" onclick="logout()">Logout</button>
+
+        </div>
+    </nav>
+
+    <!-- Body Section -->
+    <main>
+        <h1 class="category-title">All Products</h1>
+        <div id="product-list" class="product-container">
+            <!-- Products will be  loaded here -->
+        </div>
+
+
+    </main>
+    <Script src="./scripts/index.js"></Script>
+    <script>
+
+
+
+    </script>
+
+</body>
+
+</html>
